@@ -7,11 +7,11 @@ class Scaffold < Formula
 
   if OS.mac?
     url "https://github.com/clevyr/scaffold/releases/download/v0.2.0/scaffold_0.2.0_Darwin_x86_64.tar.gz"
-    sha256 "199985c8c4bde51b32a0af3f426a0472ad01a19d4b798c1176b1b6d27887bc43"
+    sha256 "423454532870aa9380f69c48664b21adfb936300820cf7739a634eb21b91cd7c"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/clevyr/scaffold/releases/download/v0.2.0/scaffold_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "9be10e5cd90147297b26426c46f3f244acd9cb61885f3e4fae0177ea43c443de"
+      sha256 "07c86ee908046c687cd247b4dd62c787424d7e16e0ca80c61fb902ffb5bf4e2c"
     end
   end
 
