@@ -6,12 +6,12 @@ class Scaffold < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.2.0/scaffold_0.2.0_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "cac065e837e1846973425ff4d382e8304a29cdafb6b02f140dcc0320407ee2a3"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.2.0/scaffold_0.2.0_Darwin_x86_64.tar.gz"
+    sha256 "199985c8c4bde51b32a0af3f426a0472ad01a19d4b798c1176b1b6d27887bc43"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.2.0/scaffold_0.2.0_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "21d31725ea1a08a2039367d4e699997204162a4c3af1bdecc3c75b8a4dc804fd"
+      url "https://github.com/clevyr/scaffold/releases/download/v0.2.0/scaffold_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "9be10e5cd90147297b26426c46f3f244acd9cb61885f3e4fae0177ea43c443de"
     end
   end
 
