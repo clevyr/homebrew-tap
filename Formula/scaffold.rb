@@ -2,16 +2,16 @@
 class Scaffold < Formula
   desc ""
   homepage ""
-  version "0.3.10"
+  version "0.3.11"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.3.10/scaffold_0.3.10_Darwin_x86_64.tar.gz"
-    sha256 "5563977694d6219a73ffb11e4418baa41b81a6e1532ec9024529da99f43d020e"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.3.11/scaffold_0.3.11_Darwin_x86_64.tar.gz"
+    sha256 "f9678dcacc60fb5bf70b0671e6015b715cf1fc0802ba32a66d5a0d97da040f9b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.3.10/scaffold_0.3.10_Linux_x86_64.tar.gz"
-      sha256 "386c00625c808e6a8e3c1eab879c5887a65dd2a1f389f98ea6c9de7945c09590"
+      url "https://github.com/clevyr/scaffold/releases/download/v0.3.11/scaffold_0.3.11_Linux_x86_64.tar.gz"
+      sha256 "fdd4faadc6bddc47b82ff10f82ebb9d2104c74cf51f5c4125d296b44fa3c5aa2"
     end
   end
 
