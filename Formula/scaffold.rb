@@ -5,24 +5,28 @@
 class Scaffold < Formula
   desc ""
   homepage ""
-  version "0.4.3"
+  version "0.4.4"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.3/scaffold_0.4.3_Darwin_x86_64.tar.gz"
-    sha256 "9965e0cc24d5e986cd25f5dd6c8e20b780655cccb8a99172083a425ca3303d89"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.4/scaffold_0.4.4_Darwin_x86_64.tar.gz"
+    sha256 "c3d6b5728c6e6a9227147b877091e50dca56188eb4b53e0b6230297a9219ac88"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.4/scaffold_0.4.4_Darwin_arm64.tar.gz"
+    sha256 "0f37314a56bc33f11a2080fc8877e89c0125e86c8cfa4baf778e1a4efb5b456e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.3/scaffold_0.4.3_Linux_x86_64.tar.gz"
-    sha256 "1c7dafd2bd16021ee1c327e6ec7ea41a49e644677c377b74bf25e70cbcafe2a7"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.4/scaffold_0.4.4_Linux_x86_64.tar.gz"
+    sha256 "bf7ec6279f198deb70e470bc398209fe3af3a2190d1107de11ac8a6a904921df"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.3/scaffold_0.4.3_Linux_armv6.tar.gz"
-    sha256 "b4ebb677ff849650543a3e17de3cf0c03de78d16751416a421e09bb7b4c17770"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.4/scaffold_0.4.4_Linux_armv6.tar.gz"
+    sha256 "e74f47f7c97c03fca9651d1ccc27c0e6085119cac928ee62ce7efe59a9e01872"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.3/scaffold_0.4.3_Linux_arm64.tar.gz"
-    sha256 "fc101dcc6b9c0572bbf92f3b5615afc484d74de42a589f9570f1e429c6156dc5"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.4/scaffold_0.4.4_Linux_arm64.tar.gz"
+    sha256 "73ee37f34639ae2e8c91b59572b47b80c38af93efa6021e6c2b0963c8e8c7ebc"
   end
 
   def install
