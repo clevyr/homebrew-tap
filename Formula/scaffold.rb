@@ -5,28 +5,28 @@
 class Scaffold < Formula
   desc ""
   homepage ""
-  version "0.4.6"
+  version "0.4.7"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.6/scaffold_0.4.6_Darwin_x86_64.tar.gz"
-    sha256 "cc8f3b05132207cebb1bd89922d18f19a42e93fb21fc2ce5636796e4d93260f6"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.7/scaffold_0.4.7_Darwin_x86_64.tar.gz"
+    sha256 "f9be7d54b491b0a2d7e5be73ef9ea55a54dc84466511f9b6dba36277358ef82b"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.6/scaffold_0.4.6_Darwin_arm64.tar.gz"
-    sha256 "31efc78dd45d850ec9fe2131958d86001487101ac740b11487ecee03bddb1cc1"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.7/scaffold_0.4.7_Darwin_arm64.tar.gz"
+    sha256 "982421f1cb2b77f9cd4696b8e6a404bd3eaea22a1778aab52845c794cf756104"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.6/scaffold_0.4.6_Linux_x86_64.tar.gz"
-    sha256 "922a887c42df574f20ef4e79c7d0371270510e23536ad59f7c850442f4d5ca10"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.7/scaffold_0.4.7_Linux_x86_64.tar.gz"
+    sha256 "d76d9bbfa3cff9bee5e9abe9d839279e48b92be6df1713e0106916274fbeb36e"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.6/scaffold_0.4.6_Linux_armv6.tar.gz"
-    sha256 "84b95af1c79e4ba8c60f632ce179cef56675e8206c9b11f40f1d2e9812a05c57"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.7/scaffold_0.4.7_Linux_armv6.tar.gz"
+    sha256 "047509f7b1c2d785fd6864523b0928aba470c6f700de2db4864574a812c5d27f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/clevyr/scaffold/releases/download/v0.4.6/scaffold_0.4.6_Linux_arm64.tar.gz"
-    sha256 "127f4c7f02439a6206cafedd59a61f2e93ead5d1b633128e0c10f152b746d2a8"
+    url "https://github.com/clevyr/scaffold/releases/download/v0.4.7/scaffold_0.4.7_Linux_arm64.tar.gz"
+    sha256 "94fbc2286c08b0c89ed86e9e32a450efdd63f8fb853b9ed300d4d12d7fe32bb0"
   end
 
   def install
