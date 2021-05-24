@@ -5,28 +5,28 @@
 class Kubedb < Formula
   desc ""
   homepage ""
-  version "0.0.2"
+  version "0.0.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/clevyr/kubedb/releases/download/v0.0.2/kubedb_0.0.2_Darwin_x86_64.tar.gz"
-    sha256 "baa26dfacd0723ee9dc3b1a0a0a1ac43b1aa7fd05521260a739dffa07f35f075"
+    url "https://github.com/clevyr/kubedb/releases/download/v0.0.3/kubedb_0.0.3_Darwin_x86_64.tar.gz"
+    sha256 "5d15f606a445430bd1cdca9cc7b449b28f402a2255b182539abbe3494fcf50de"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/clevyr/kubedb/releases/download/v0.0.2/kubedb_0.0.2_Darwin_arm64.tar.gz"
-    sha256 "bcca687c409906b9f9979131cc648b19eee49e6c418282135e7c0afb5ba5ba9f"
+    url "https://github.com/clevyr/kubedb/releases/download/v0.0.3/kubedb_0.0.3_Darwin_arm64.tar.gz"
+    sha256 "f5c6b168aa0df53c9cd14c9b0daae99e120356b092172a68a0f36f80a76f1969"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/clevyr/kubedb/releases/download/v0.0.2/kubedb_0.0.2_Linux_x86_64.tar.gz"
-    sha256 "6fb934f46887db5694acee3001d585f00ea25d12a682b468c895e6d3ad0d708c"
+    url "https://github.com/clevyr/kubedb/releases/download/v0.0.3/kubedb_0.0.3_Linux_x86_64.tar.gz"
+    sha256 "3c10deed5d84f8d06e3bf1d9f1b5fe36367e3e18e065c74e6fd311fc59c2931c"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/clevyr/kubedb/releases/download/v0.0.2/kubedb_0.0.2_Linux_armv6.tar.gz"
-    sha256 "3aa7b9e4970b1e7847f815604b2a7ff93c41c61925bab07f1307e66a28aa7895"
+    url "https://github.com/clevyr/kubedb/releases/download/v0.0.3/kubedb_0.0.3_Linux_armv6.tar.gz"
+    sha256 "2e3a800b0eccac412d9be49d2ed1f965b96dd7699c2789c25b05ae4c08ca4e34"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/clevyr/kubedb/releases/download/v0.0.2/kubedb_0.0.2_Linux_arm64.tar.gz"
-    sha256 "ea7b01c4812c751d8d2a6adbbbbca75147a3c9c6ec7e5271166fb1809defbd31"
+    url "https://github.com/clevyr/kubedb/releases/download/v0.0.3/kubedb_0.0.3_Linux_arm64.tar.gz"
+    sha256 "810894a2e5c702aec97c3a958f4191063f87227b9bb05dbe1a77753433c01345"
   end
 
   def install
