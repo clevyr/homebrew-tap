@@ -5,12 +5,12 @@
 class Kubedb < Formula
   desc ""
   homepage ""
-  version "1.1.2"
+  version "1.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.1.2/kubedb_1.1.2_Darwin_x86_64.tar.gz"
-      sha256 "d64fed79fd92aa56177e03efdb22a1f76798798d9ca5aa223b79c29799486c5d"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.2.0/kubedb_1.2.0_Darwin_x86_64.tar.gz"
+      sha256 "e30ce2f6dcd27b3aa8f4c12a6e987ca6bca1a81262f9e9fbdbe8349c2bcf70b5"
 
       def install
         bin.install "kubedb"
@@ -21,8 +21,8 @@ class Kubedb < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.1.2/kubedb_1.1.2_Darwin_arm64.tar.gz"
-      sha256 "f60d74824e3ab63bd189a45679f0f8674a3ba51519c4b0b2c9bcc4f5915b782f"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.2.0/kubedb_1.2.0_Darwin_arm64.tar.gz"
+      sha256 "277dd5ec54e2568c264cf8f5a4d9845786083ee36217d5c6d36709c0556758d9"
 
       def install
         bin.install "kubedb"
@@ -35,21 +35,9 @@ class Kubedb < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.1.2/kubedb_1.1.2_Linux_arm64.tar.gz"
-      sha256 "c7ffbed4dd6c4a9a87e4a1447ae155c99af8f8bfea86dfece05ee62836140334"
-
-      def install
-        bin.install "kubedb"
-        output = Utils.safe_popen_read("#{bin}/kubedb", "completion", "bash")
-        (bash_completion/"kubedb").write output
-        output = Utils.safe_popen_read("#{bin}/kubedb", "completion", "zsh")
-        (zsh_completion/"_kubedb").write output
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.1.2/kubedb_1.1.2_Linux_x86_64.tar.gz"
-      sha256 "810fde6d2239b5925e6a204185e1b0cb3336ae9e212fcd55376746809ebb29f2"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.2.0/kubedb_1.2.0_Linux_x86_64.tar.gz"
+      sha256 "9faa8c3e82279a4f45a869988f48532b0303bab50df2f1410d693817decf906e"
 
       def install
         bin.install "kubedb"
@@ -60,8 +48,20 @@ class Kubedb < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.1.2/kubedb_1.1.2_Linux_armv6.tar.gz"
-      sha256 "19fb6ae4d79dd89860e9e49633ee9f2c64366e24c10b8b7bd1d2618f730a86d5"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.2.0/kubedb_1.2.0_Linux_armv6.tar.gz"
+      sha256 "af5ffcb50c03c4175f94b2527bcf5065fa40b4141c5d3acbc1a5f18b99089d3b"
+
+      def install
+        bin.install "kubedb"
+        output = Utils.safe_popen_read("#{bin}/kubedb", "completion", "bash")
+        (bash_completion/"kubedb").write output
+        output = Utils.safe_popen_read("#{bin}/kubedb", "completion", "zsh")
+        (zsh_completion/"_kubedb").write output
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/clevyr/kubedb/releases/download/v1.2.0/kubedb_1.2.0_Linux_arm64.tar.gz"
+      sha256 "ff9b8c1ad7bcbdc82e7787de64dac4288d59065f349ace44039125ca4077a68b"
 
       def install
         bin.install "kubedb"
