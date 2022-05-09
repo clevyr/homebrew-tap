@@ -5,12 +5,12 @@
 class Yampl < Formula
   desc ""
   homepage ""
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.4/yampl_0.0.4_Darwin_arm64.tar.gz"
-      sha256 "51bbcf0cb7792955c849556d532e0aed1483da89cfe64c14ca89aad713fef308"
+    if Hardware::CPU.intel?
+      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.5/yampl_0.0.5_Darwin_x86_64.tar.gz"
+      sha256 "3e5cef31f7c6aa7dc5f2f5ae79e5ca1cd3dd786fb1a7ccbfeb5c51372f8a4c11"
 
       def install
         bin.install "yampl"
@@ -20,9 +20,9 @@ class Yampl < Formula
         (zsh_completion/"_yampl").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.4/yampl_0.0.4_Darwin_x86_64.tar.gz"
-      sha256 "7babc172f0333107cd89c68ffbaedd9a9d0e7df04dd465dce7c05ef099da6e86"
+    if Hardware::CPU.arm?
+      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.5/yampl_0.0.5_Darwin_arm64.tar.gz"
+      sha256 "32e854e58727175bd62602c8c32360c47f194800d30320c2862813c622a0547a"
 
       def install
         bin.install "yampl"
@@ -35,9 +35,9 @@ class Yampl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.4/yampl_0.0.4_Linux_armv6.tar.gz"
-      sha256 "3ebd3df038655e07f549081c84b35076991fcef94eecd469ad447449e4e1c8ba"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.5/yampl_0.0.5_Linux_arm64.tar.gz"
+      sha256 "bd1a01350b0ae7272f5ba7b51909f11c335b3cfaf0b63b85e1174720a4370a10"
 
       def install
         bin.install "yampl"
@@ -48,20 +48,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.4/yampl_0.0.4_Linux_x86_64.tar.gz"
-      sha256 "b5f690e3e7407fa69d200431c094ffe32a732e2b635f03acdd8922bd4c81b96f"
-
-      def install
-        bin.install "yampl"
-        output = Utils.safe_popen_read("#{bin}/yampl", "--completion=bash")
-        (bash_completion/"yampl").write output
-        output = Utils.safe_popen_read("#{bin}/yampl", "--completion=zsh")
-        (zsh_completion/"_yampl").write output
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.4/yampl_0.0.4_Linux_arm64.tar.gz"
-      sha256 "060849decc2ed5b68a6a68cdece8afa97eea017ae9c7ff52d22fe5799c9bc9b9"
+      url "https://github.com/clevyr/go-yampl/releases/download/v0.0.5/yampl_0.0.5_Linux_x86_64.tar.gz"
+      sha256 "756af57821015b6f32925969f83422638740c04de6f6ff863c5d184c82892561"
 
       def install
         bin.install "yampl"
