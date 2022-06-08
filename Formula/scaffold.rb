@@ -5,20 +5,20 @@
 class Scaffold < Formula
   desc ""
   homepage ""
-  version "0.7.3"
+  version "0.7.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.7.3/scaffold_0.7.3_Darwin_x86_64.tar.gz"
-      sha256 "6073b85df688687f3179f8df40fa2c1294ed2fe6e865bc4454ae286ea80c6c67"
+    if Hardware::CPU.arm?
+      url "https://github.com/clevyr/scaffold/releases/download/v0.7.4/scaffold_0.7.4_Darwin_arm64.tar.gz"
+      sha256 "e99df505fb993c81ce572061d26e0e048b318eb21fe0fc4e823a88bca0f6c390"
 
       def install
         bin.install "scaffold"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.7.3/scaffold_0.7.3_Darwin_arm64.tar.gz"
-      sha256 "f28b22aebb28b5ec0392b3d73e7dbaf0bcb2b1882084c347d51cd3243cec37a2"
+    if Hardware::CPU.intel?
+      url "https://github.com/clevyr/scaffold/releases/download/v0.7.4/scaffold_0.7.4_Darwin_x86_64.tar.gz"
+      sha256 "48802d9e8ba198d9d18b90b2c2675481961eb92ac957d2405c0f56513f325b85"
 
       def install
         bin.install "scaffold"
@@ -27,25 +27,25 @@ class Scaffold < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/clevyr/scaffold/releases/download/v0.7.4/scaffold_0.7.4_Linux_x86_64.tar.gz"
+      sha256 "f69ae3ea9424046a557966de57fc57a7910dccd0398cf466d5ba43329b5b7797"
+
+      def install
+        bin.install "scaffold"
+      end
+    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.7.3/scaffold_0.7.3_Linux_armv6.tar.gz"
-      sha256 "96c0c9f9de91dd4177c2ffbc8c609d0b530cd030c463164b624e97d9b9844267"
+      url "https://github.com/clevyr/scaffold/releases/download/v0.7.4/scaffold_0.7.4_Linux_armv6.tar.gz"
+      sha256 "5d70efe19c4a4752e1b1925564b4a6786a7e047870a605d80d5f777c4b4a09f8"
 
       def install
         bin.install "scaffold"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.7.3/scaffold_0.7.3_Linux_arm64.tar.gz"
-      sha256 "c3bb9b29f778f1289528993da8f3a5e6a9cea0db333bed887ea6f1b5499d1cc4"
-
-      def install
-        bin.install "scaffold"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.7.3/scaffold_0.7.3_Linux_x86_64.tar.gz"
-      sha256 "f5727f2fee1d86c63a6b44de3aefa5965248f92f726295be08f88eb01e5c32c8"
+      url "https://github.com/clevyr/scaffold/releases/download/v0.7.4/scaffold_0.7.4_Linux_arm64.tar.gz"
+      sha256 "c810a46669b3268d1da08582a817273bd8d6501c2a3c5f84583d47e4c57161b7"
 
       def install
         bin.install "scaffold"
