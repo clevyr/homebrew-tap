@@ -5,12 +5,12 @@
 class Kubedb < Formula
   desc ""
   homepage ""
-  version "1.4.1"
+  version "1.4.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.4.1/kubedb_1.4.1_Darwin_arm64.tar.gz"
-      sha256 "8eef7f2ac8eedd4c54e205a086c6e983ecfce48869e04d2dab815229cf352eab"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.4.2/kubedb_1.4.2_Darwin_arm64.tar.gz"
+      sha256 "b95e282bfe2390011bb96874897c225ea6f8d389ddca3e2a2558483fae89f40b"
 
       def install
         bin.install "kubedb"
@@ -21,8 +21,8 @@ class Kubedb < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.4.1/kubedb_1.4.1_Darwin_x86_64.tar.gz"
-      sha256 "3458de4df7421f59032fe46d226823b12f31be58aa448dc8ab5c50894742eff2"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.4.2/kubedb_1.4.2_Darwin_x86_64.tar.gz"
+      sha256 "c27545986866ca489ea6c84a18f86857db8a6f1667759fc7c3248ef652ac5020"
 
       def install
         bin.install "kubedb"
@@ -36,8 +36,8 @@ class Kubedb < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.4.1/kubedb_1.4.1_Linux_x86_64.tar.gz"
-      sha256 "098618b0281d0ce7617a54497a6bb4024e6e72dfb3b30f2536430d7335d728a6"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.4.2/kubedb_1.4.2_Linux_x86_64.tar.gz"
+      sha256 "deba7ead911ead3a29943b21c6c00ee5c0358b9f98d8032807d0e1f290790162"
 
       def install
         bin.install "kubedb"
@@ -48,8 +48,8 @@ class Kubedb < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.4.1/kubedb_1.4.1_Linux_arm64.tar.gz"
-      sha256 "05a59ccb6eaa90cba11bc69ec4488e39baf59bc458783de7cd5946075fc9454d"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.4.2/kubedb_1.4.2_Linux_arm64.tar.gz"
+      sha256 "9bf81560fca2e2a9ac0a562e719cdc9fb7daa31366ad619d720c470608667aef"
 
       def install
         bin.install "kubedb"
