@@ -5,12 +5,12 @@
 class Yampl < Formula
   desc ""
   homepage ""
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.2.3/yampl_0.2.3_Darwin_x86_64.tar.gz"
-      sha256 "912bfbcbe4cdb508a58e1a94e5f23c6b7d563f63d388d7d0ae55d25d50c79015"
+      url "https://github.com/clevyr/yampl/releases/download/v0.2.4/yampl_0.2.4_Darwin_x86_64.tar.gz"
+      sha256 "6e36d0f88ca3da86fec6159c0c4cd8e052a654e037d38fbebc0a4b9dc8a3f55c"
 
       def install
         bin.install "yampl"
@@ -21,8 +21,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.2.3/yampl_0.2.3_Darwin_arm64.tar.gz"
-      sha256 "498f847acfd4bb8887e8e2e9115a2cdc38089ac5c7b95908b8fc25bb64123856"
+      url "https://github.com/clevyr/yampl/releases/download/v0.2.4/yampl_0.2.4_Darwin_arm64.tar.gz"
+      sha256 "a9b41db54062e084cdfbbfb414e100ea75dd2c25a5a1607d35bd963861c512ba"
 
       def install
         bin.install "yampl"
@@ -36,8 +36,8 @@ class Yampl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.2.3/yampl_0.2.3_Linux_x86_64.tar.gz"
-      sha256 "2f0d25f651ecb88ee57a4fa7b7f0f1a9e232463d9d907286b4334b33ac260446"
+      url "https://github.com/clevyr/yampl/releases/download/v0.2.4/yampl_0.2.4_Linux_x86_64.tar.gz"
+      sha256 "d81b8eb6d7e7bba94c56e4b2a24f7bbe68c07d38904f59279087bad2c8307dfd"
 
       def install
         bin.install "yampl"
@@ -48,8 +48,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/go-yampl/releases/download/v0.2.3/yampl_0.2.3_Linux_arm64.tar.gz"
-      sha256 "df45d71d3dc6ca43c0dcfcc1307048b0d0c3323d8576b9ae7e2d0408ff4a84de"
+      url "https://github.com/clevyr/yampl/releases/download/v0.2.4/yampl_0.2.4_Linux_arm64.tar.gz"
+      sha256 "e8358b24f6ccd725ae8454d2940186fad66a0be500e4e90f519afd57321cebd6"
 
       def install
         bin.install "yampl"
