@@ -5,12 +5,12 @@
 class Yampl < Formula
   desc ""
   homepage ""
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.1/yampl_0.3.1_Darwin_x86_64.tar.gz"
-      sha256 "f16a344d1c7b179ee3e1e20860411fb1df9d2bf49ba8e1e33ddb79d2525d662f"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.2/yampl_0.3.2_Darwin_x86_64.tar.gz"
+      sha256 "6def3694683e4c94598c17fa52a00d70818da7d419027fc2103bcf07e0427f08"
 
       def install
         bin.install "yampl"
@@ -21,8 +21,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.1/yampl_0.3.1_Darwin_arm64.tar.gz"
-      sha256 "9a5230957e22528b502d9706ebe3a188154dd4984bb843d0b59e886ada45b495"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.2/yampl_0.3.2_Darwin_arm64.tar.gz"
+      sha256 "f34d369675af17f7de58e22d8d286d891bb36849bba12ee5104a3a30df1e41c1"
 
       def install
         bin.install "yampl"
@@ -36,8 +36,8 @@ class Yampl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.1/yampl_0.3.1_Linux_arm64.tar.gz"
-      sha256 "3e35d806d802dc7cdd1e8a17609b37e853fdcadc6884032812f8cff0a6fd98e4"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.2/yampl_0.3.2_Linux_arm64.tar.gz"
+      sha256 "17ab28b1a15e854a542e04e3dad85118c2479bb34905d5a7ce3f39ba1035e501"
 
       def install
         bin.install "yampl"
@@ -48,8 +48,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.1/yampl_0.3.1_Linux_x86_64.tar.gz"
-      sha256 "546c2ce204c91b69e5d19dc6b18090880e28b492316c2ab5b5797755090d35e3"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.2/yampl_0.3.2_Linux_x86_64.tar.gz"
+      sha256 "5ca62546debae1228b154ba0837cfeeaf633d675d76dd2c46d30e29632f8affa"
 
       def install
         bin.install "yampl"
