@@ -5,12 +5,12 @@
 class Yampl < Formula
   desc ""
   homepage ""
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.2/yampl_0.3.2_Darwin_x86_64.tar.gz"
-      sha256 "6def3694683e4c94598c17fa52a00d70818da7d419027fc2103bcf07e0427f08"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.3/yampl_0.3.3_Darwin_x86_64.tar.gz"
+      sha256 "cab85e48cdbf831938b774b03e6d26d8f3472f6a5d89b01d99b6049af03942ca"
 
       def install
         bin.install "yampl"
@@ -21,8 +21,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.2/yampl_0.3.2_Darwin_arm64.tar.gz"
-      sha256 "f34d369675af17f7de58e22d8d286d891bb36849bba12ee5104a3a30df1e41c1"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.3/yampl_0.3.3_Darwin_arm64.tar.gz"
+      sha256 "87036b4626afc7d766f873275662fa4be9589b880b39970466cb895580e03737"
 
       def install
         bin.install "yampl"
@@ -36,8 +36,8 @@ class Yampl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.2/yampl_0.3.2_Linux_arm64.tar.gz"
-      sha256 "17ab28b1a15e854a542e04e3dad85118c2479bb34905d5a7ce3f39ba1035e501"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.3/yampl_0.3.3_Linux_arm64.tar.gz"
+      sha256 "5324cff4cbe5b8e61ba67c27eed399d99a098915a3830b3b422de250910cf41b"
 
       def install
         bin.install "yampl"
@@ -48,8 +48,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.2/yampl_0.3.2_Linux_x86_64.tar.gz"
-      sha256 "5ca62546debae1228b154ba0837cfeeaf633d675d76dd2c46d30e29632f8affa"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.3/yampl_0.3.3_Linux_x86_64.tar.gz"
+      sha256 "4a9dc942e655fa06b8969466b5bf540ed871cf50008ed2bd3c4a97580b1cde62"
 
       def install
         bin.install "yampl"
