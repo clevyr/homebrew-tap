@@ -5,12 +5,12 @@
 class Yampl < Formula
   desc ""
   homepage ""
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.4/yampl_0.3.4_Darwin_arm64.tar.gz"
-      sha256 "5decb636eeb07be6041f2937a3eaea882f892226be2478624dd2f9b2e5820cc4"
+    if Hardware::CPU.intel?
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.5/yampl_Darwin_x86_64.tar.gz"
+      sha256 "66ad961e7392172722d20a0398e7f9f08b9d2a79a475dfe0e4fe0fe1c5af8b3e"
 
       def install
         bin.install "yampl"
@@ -20,9 +20,9 @@ class Yampl < Formula
         (zsh_completion/"_yampl").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.4/yampl_0.3.4_Darwin_x86_64.tar.gz"
-      sha256 "02c724120a1249cecbeb3dc0018db096cc35e9f9087bfa6b5ab9fa7ffe0d3c80"
+    if Hardware::CPU.arm?
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.5/yampl_Darwin_arm64.tar.gz"
+      sha256 "3a82df8882f433ff597ef900363b61dec860714d97f1a516091fe61466174d9d"
 
       def install
         bin.install "yampl"
@@ -35,9 +35,9 @@ class Yampl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.4/yampl_0.3.4_Linux_x86_64.tar.gz"
-      sha256 "218329e217abe4dda38f379f7c22bf5ecdf6224d40fb26132a434e47af55eb3e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.5/yampl_Linux_arm64.tar.gz"
+      sha256 "c64af24ce8068c157056fdaafa979f0a1cceef7d3794eeefbdc2d0ccdf2cc64b"
 
       def install
         bin.install "yampl"
@@ -47,9 +47,9 @@ class Yampl < Formula
         (zsh_completion/"_yampl").write output
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.4/yampl_0.3.4_Linux_arm64.tar.gz"
-      sha256 "f140ea51f8d46fe617b14c436d6abeca294b36979a5e7d0af7ea81aae272fbd9"
+    if Hardware::CPU.intel?
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.5/yampl_Linux_x86_64.tar.gz"
+      sha256 "34e3785d2f4ad1c8ba917970eaa1c39df03b17bb0d0871ba0fe6d869191add3d"
 
       def install
         bin.install "yampl"
