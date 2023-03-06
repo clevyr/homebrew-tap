@@ -9,8 +9,8 @@ class Yampl < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.9/yampl_darwin_arm64.tar.gz"
-      sha256 "41b551528b0620d888d74e28f991e075246301aaa02e5f19ad667ca55aa01d5c"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.9/yampl_0.3.9_darwin_arm64.tar.gz"
+      sha256 "a259847b5bda279fd75d22b54fad13fca8eb13d9c66830c7580248d055c5d221"
 
       def install
         bin.install "yampl"
@@ -21,8 +21,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.9/yampl_darwin_amd64.tar.gz"
-      sha256 "3332376f2d7d80d3fd65381b3af06bcf35974664a9ed7b7a896678269e982a7b"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.9/yampl_0.3.9_darwin_amd64.tar.gz"
+      sha256 "beced286da7abf1d189b22351cb5fc45c0d41055d7b748fc88cdd887e59fe1d5"
 
       def install
         bin.install "yampl"
@@ -36,8 +36,8 @@ class Yampl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.9/yampl_linux_amd64.tar.gz"
-      sha256 "cbeee493c1a98e477ae45b2707883650b4eee0e5d7e5a7206e4af475f556d79d"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.9/yampl_0.3.9_linux_amd64.tar.gz"
+      sha256 "e78b364f67191f0baec8f681ad3bb0f83818a6297dfeb3c596a1aa4949b12bc9"
 
       def install
         bin.install "yampl"
@@ -48,8 +48,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.9/yampl_linux_arm64.tar.gz"
-      sha256 "a5f0b21be7970fe6e3819869d7bcd78aeaa5d1dada24052f07acaa235add284a"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.9/yampl_0.3.9_linux_arm64.tar.gz"
+      sha256 "2cdee7c3bcbbe2b6513d62a967bc7ce6d3ca53f3c5ab22019b74ba6d88b0b9ba"
 
       def install
         bin.install "yampl"
