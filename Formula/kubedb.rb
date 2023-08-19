@@ -5,27 +5,37 @@
 class Kubedb < Formula
   desc "Painlessly work with Kubernetes databases"
   homepage "https://github.com/clevyr/kubedb"
-  version "1.4.14"
+  version "1.5.0"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.4.14/kubedb_1.4.14_darwin_amd64.tar.gz"
-      sha256 "a86537e2c4a74b459ead63d3338261e5fce39217699996f9b93f000520fa7fc8"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.5.0/kubedb_1.5.0_darwin_amd64.tar.gz"
+      sha256 "459e1b6fb41953947d8bc6b63911ddc3a4a22f1342a3fb4ab5107762ed368653"
 
       def install
         bin.install "kubedb"
+        man1.install "manpages/kubedb.1.gz"
+        man1.install "manpages/kubedb-dump.1.gz"
+        man1.install "manpages/kubedb-exec.1.gz"
+        man1.install "manpages/kubedb-port-forward.1.gz"
+        man1.install "manpages/kubedb-restore.1.gz"
         bash_completion.install "completions/kubedb.bash" => "kubedb"
         zsh_completion.install "completions/kubedb.zsh" => "_kubedb"
         fish_completion.install "completions/kubedb.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.4.14/kubedb_1.4.14_darwin_arm64.tar.gz"
-      sha256 "47db84371fdb10cf8179d732d9bb82b200f7d9b7ff21ee7a522b1062c848e0a3"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.5.0/kubedb_1.5.0_darwin_arm64.tar.gz"
+      sha256 "ade3ba3af1ba3b08d9f803889eba2f9fd4402f32f0cb72e373e2eea7754b9836"
 
       def install
         bin.install "kubedb"
+        man1.install "manpages/kubedb.1.gz"
+        man1.install "manpages/kubedb-dump.1.gz"
+        man1.install "manpages/kubedb-exec.1.gz"
+        man1.install "manpages/kubedb-port-forward.1.gz"
+        man1.install "manpages/kubedb-restore.1.gz"
         bash_completion.install "completions/kubedb.bash" => "kubedb"
         zsh_completion.install "completions/kubedb.zsh" => "_kubedb"
         fish_completion.install "completions/kubedb.fish"
@@ -35,22 +45,32 @@ class Kubedb < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.4.14/kubedb_1.4.14_linux_amd64.tar.gz"
-      sha256 "dd53f98314af5836e4a38b986ae2cd4b2f6ee5979021f486bcb8443662101f18"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.5.0/kubedb_1.5.0_linux_amd64.tar.gz"
+      sha256 "95d8515a665ec2a64d89fb55154192abd96973de07265c8f1f469345c976dfee"
 
       def install
         bin.install "kubedb"
+        man1.install "manpages/kubedb.1.gz"
+        man1.install "manpages/kubedb-dump.1.gz"
+        man1.install "manpages/kubedb-exec.1.gz"
+        man1.install "manpages/kubedb-port-forward.1.gz"
+        man1.install "manpages/kubedb-restore.1.gz"
         bash_completion.install "completions/kubedb.bash" => "kubedb"
         zsh_completion.install "completions/kubedb.zsh" => "_kubedb"
         fish_completion.install "completions/kubedb.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.4.14/kubedb_1.4.14_linux_arm64.tar.gz"
-      sha256 "9ab90aacf01c074ea0741af895a5edf843a9d1d0ad486c5d69968953db982655"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.5.0/kubedb_1.5.0_linux_arm64.tar.gz"
+      sha256 "213ef9c1cd494139eed7e38adddad65059db3a59834cd7aa433dbbc9e8fddd46"
 
       def install
         bin.install "kubedb"
+        man1.install "manpages/kubedb.1.gz"
+        man1.install "manpages/kubedb-dump.1.gz"
+        man1.install "manpages/kubedb-exec.1.gz"
+        man1.install "manpages/kubedb-port-forward.1.gz"
+        man1.install "manpages/kubedb-restore.1.gz"
         bash_completion.install "completions/kubedb.bash" => "kubedb"
         zsh_completion.install "completions/kubedb.zsh" => "_kubedb"
         fish_completion.install "completions/kubedb.fish"
