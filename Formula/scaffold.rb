@@ -5,12 +5,12 @@
 class Scaffold < Formula
   desc ""
   homepage ""
-  version "0.11.2"
+  version "0.11.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.11.2/scaffold_0.11.2_darwin_amd64.tar.gz"
-      sha256 "477c7fae69239a245d59a27e4c8578f87c1d5694a1e0d0245043b9a1e77d2c61"
+    if Hardware::CPU.arm?
+      url "https://github.com/clevyr/scaffold/releases/download/v0.11.3/scaffold_0.11.3_darwin_arm64.tar.gz"
+      sha256 "e34650fe606660d29ac1224a4736dc44c4b0f11a6f87a959788d1cea72e99190"
 
       def install
         bin.install "scaffold"
@@ -20,9 +20,9 @@ class Scaffold < Formula
         (zsh_completion/"_scaffold").write output
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.11.2/scaffold_0.11.2_darwin_arm64.tar.gz"
-      sha256 "494adb2a7a9f3afb0059e976b04d82c8c21515311838ccbda3b3070855c42320"
+    if Hardware::CPU.intel?
+      url "https://github.com/clevyr/scaffold/releases/download/v0.11.3/scaffold_0.11.3_darwin_amd64.tar.gz"
+      sha256 "25e75f74ec86f5281999f0f6ea69b3d3732da00a71bd1b9766a2b0a65bf27aeb"
 
       def install
         bin.install "scaffold"
@@ -36,8 +36,8 @@ class Scaffold < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.11.2/scaffold_0.11.2_linux_arm64.tar.gz"
-      sha256 "96f480374263c09b228102401afa88afb481774df8b323305d94e7bfef4e205e"
+      url "https://github.com/clevyr/scaffold/releases/download/v0.11.3/scaffold_0.11.3_linux_arm64.tar.gz"
+      sha256 "5eb8b56d4e4f45cac18b7c495c1e96029477ac03137a103717cea97e83acb7a1"
 
       def install
         bin.install "scaffold"
@@ -48,8 +48,8 @@ class Scaffold < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/scaffold/releases/download/v0.11.2/scaffold_0.11.2_linux_amd64.tar.gz"
-      sha256 "3d7568763418b13ad3ee9309a2b06cbaa94f4047d4a0556a802aefbe46452a5d"
+      url "https://github.com/clevyr/scaffold/releases/download/v0.11.3/scaffold_0.11.3_linux_amd64.tar.gz"
+      sha256 "3bbe45558009820a2a63f1c3a1290f2d57e0712eb672ed19a386b3bcee2ec8fd"
 
       def install
         bin.install "scaffold"
