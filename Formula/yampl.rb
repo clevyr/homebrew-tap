@@ -5,13 +5,13 @@
 class Yampl < Formula
   desc "Yaml templating via line-comments"
   homepage "https://github.com/clevyr/yampl"
-  version "0.3.18"
+  version "0.3.19"
   license "GPL-3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.18/yampl_0.3.18_darwin_amd64.tar.gz"
-      sha256 "fb37f98360be78325851853193c9601917198e4e71f0ca98b10128defc01fc61"
+    if Hardware::CPU.arm?
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.19/yampl_0.3.19_darwin_arm64.tar.gz"
+      sha256 "93a820a9210ab40426a15a3ff3fd1a15f5c5d4e6e1a9f267587772e295512828"
 
       def install
         bin.install "yampl"
@@ -21,9 +21,9 @@ class Yampl < Formula
         fish_completion.install "completions/yampl.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.18/yampl_0.3.18_darwin_arm64.tar.gz"
-      sha256 "981f34aac2b3b9d9b35660ac90a6416548c7af7548ddb85f968e9c2af4e7ccbf"
+    if Hardware::CPU.intel?
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.19/yampl_0.3.19_darwin_amd64.tar.gz"
+      sha256 "54f743292e234caa0fbdea251bfbfcc62f11f016ea668c04e7e3ec76fa448bdc"
 
       def install
         bin.install "yampl"
@@ -37,8 +37,8 @@ class Yampl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.18/yampl_0.3.18_linux_arm64.tar.gz"
-      sha256 "39d84ca385dc5feb2362d5695314dda68134d627a348fd0b691c7bf5b98c4ec9"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.19/yampl_0.3.19_linux_arm64.tar.gz"
+      sha256 "49f522fc239d41a3e10cb75bf6130fccdc776774da676e1b5a45eab67cc53333"
 
       def install
         bin.install "yampl"
@@ -49,8 +49,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.3.18/yampl_0.3.18_linux_amd64.tar.gz"
-      sha256 "867932898d2256857ed9a8acae3e425c1b40f571613393a8672bc6c14b3aedb8"
+      url "https://github.com/clevyr/yampl/releases/download/v0.3.19/yampl_0.3.19_linux_amd64.tar.gz"
+      sha256 "e42bb09b21233f6555107c285795cab2a6fba945cd6a0b517a97c7295b0f38da"
 
       def install
         bin.install "yampl"
