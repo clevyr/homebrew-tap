@@ -5,13 +5,13 @@
 class Kubedb < Formula
   desc "Painlessly work with Kubernetes databases"
   homepage "https://github.com/clevyr/kubedb"
-  version "1.11.0"
+  version "1.12.0"
   license "GPL-3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.11.0/kubedb_1.11.0_darwin_arm64.tar.gz"
-      sha256 "6a5bc3647b32a76a7b008ffc024cf4c722a2b9d08f6e8a965d6eb4f5d5ed664e"
+    if Hardware::CPU.intel?
+      url "https://github.com/clevyr/kubedb/releases/download/v1.12.0/kubedb_1.12.0_darwin_amd64.tar.gz"
+      sha256 "04f72789631a4fcfeec0d66adfec8b10258a33294321f41b203f6b946ad5ba92"
 
       def install
         bin.install "kubedb"
@@ -26,9 +26,9 @@ class Kubedb < Formula
         fish_completion.install "completions/kubedb.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.11.0/kubedb_1.11.0_darwin_amd64.tar.gz"
-      sha256 "c35285a9fd18d21b451c63761dd90592ed7034bbab697fb3782ba9d69436e0c7"
+    if Hardware::CPU.arm?
+      url "https://github.com/clevyr/kubedb/releases/download/v1.12.0/kubedb_1.12.0_darwin_arm64.tar.gz"
+      sha256 "8f3afdaf5c01e9e6be5d6ed7960a15a529da9f8fcb7f2ce822fd184ed068df8b"
 
       def install
         bin.install "kubedb"
@@ -47,8 +47,8 @@ class Kubedb < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.11.0/kubedb_1.11.0_linux_arm64.tar.gz"
-      sha256 "c0238dc2d11f82a8adb3029d14db6b276eefce6ed8b7b70f57d61fd722a8f74d"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.12.0/kubedb_1.12.0_linux_arm64.tar.gz"
+      sha256 "af5fe27ba19f350bb7782369c4940eb754d920609235c2eb69c7548a43fc38af"
 
       def install
         bin.install "kubedb"
@@ -64,8 +64,8 @@ class Kubedb < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.11.0/kubedb_1.11.0_linux_amd64.tar.gz"
-      sha256 "65d651e15d156bf31c739be2aa516913d8eb09dc64d0768d89c3e293eb1ab892"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.12.0/kubedb_1.12.0_linux_amd64.tar.gz"
+      sha256 "a06ac92a6ae922286a7a25715b18595e6b3437998c5d7517d9e95f5ec72ff6e0"
 
       def install
         bin.install "kubedb"
