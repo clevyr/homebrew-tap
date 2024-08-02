@@ -5,13 +5,13 @@
 class Yampl < Formula
   desc "Yaml templating via line-comments"
   homepage "https://github.com/clevyr/yampl"
-  version "0.6.1"
+  version "0.7.0"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/clevyr/yampl/releases/download/v0.6.1/yampl_0.6.1_darwin_amd64.tar.gz"
-      sha256 "d925696569c10d7f5db7c24744adeef42161b7053c30c38f6aa7be27e9ef1eb6"
+      url "https://github.com/clevyr/yampl/releases/download/v0.7.0/yampl_0.7.0_darwin_amd64.tar.gz"
+      sha256 "8e32fc4a38f99ceb14d590ff30986e1be7de0852b7412c75ac3271bb5b4668a7"
 
       def install
         bin.install "yampl"
@@ -22,8 +22,8 @@ class Yampl < Formula
       end
     end
     on_arm do
-      url "https://github.com/clevyr/yampl/releases/download/v0.6.1/yampl_0.6.1_darwin_arm64.tar.gz"
-      sha256 "1fc6d82b5d3edcba8b2f5e6fa11d6a4ccd46791f430211a3275f00408f7f8e3e"
+      url "https://github.com/clevyr/yampl/releases/download/v0.7.0/yampl_0.7.0_darwin_arm64.tar.gz"
+      sha256 "778c1d33729197d30ce26ee7b7666d676d71412b285fc0691f1fda61c49a70fe"
 
       def install
         bin.install "yampl"
@@ -38,8 +38,8 @@ class Yampl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/yampl/releases/download/v0.6.1/yampl_0.6.1_linux_amd64.tar.gz"
-        sha256 "66472442f10c5485834c47bef81296575b20bbfcf685a609f85cef7ae91c1532"
+        url "https://github.com/clevyr/yampl/releases/download/v0.7.0/yampl_0.7.0_linux_amd64.tar.gz"
+        sha256 "2f8c872214fa6e6189712a4bb026a7a1db0cc6ba9076e81ffefa8827d14d30c1"
 
         def install
           bin.install "yampl"
@@ -52,8 +52,8 @@ class Yampl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/yampl/releases/download/v0.6.1/yampl_0.6.1_linux_arm64.tar.gz"
-        sha256 "56f15f85ee60abebcda1b9cb0ee7cc27d1cecdd3f19d277efce1e7fb42dedacc"
+        url "https://github.com/clevyr/yampl/releases/download/v0.7.0/yampl_0.7.0_linux_arm64.tar.gz"
+        sha256 "76df2448106cc095bfb787cf23290e519d48a51918c349d886aa4f89e7be5446"
 
         def install
           bin.install "yampl"
