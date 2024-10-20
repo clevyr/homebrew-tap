@@ -5,42 +5,32 @@
 class Kubedb < Formula
   desc "Painlessly work with Kubernetes databases"
   homepage "https://github.com/clevyr/kubedb"
-  version "1.15.0"
+  version "1.15.1"
   license "GPL-3.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/clevyr/kubedb/releases/download/v1.15.0/kubedb_1.15.0_darwin_amd64.tar.gz"
-      sha256 "4d9a910bca8a94fa6508b689c59e7f1b34d0b9535aa436d455c2f193ade68b09"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.15.1/kubedb_1.15.1_darwin_amd64.tar.gz"
+      sha256 "93382ae8e0cfe254f5ad86b1d1043b8e9ce7d6165ab387da30ddd66688215443"
 
       def install
         bin.install "kubedb"
-        man1.install "manpages/kubedb.1.gz"
-        man1.install "manpages/kubedb-dump.1.gz"
-        man1.install "manpages/kubedb-exec.1.gz"
-        man1.install "manpages/kubedb-port-forward.1.gz"
-        man1.install "manpages/kubedb-restore.1.gz"
-        man1.install "manpages/kubedb-status.1.gz"
-        bash_completion.install "completions/kubedb.bash" => "kubedb"
-        zsh_completion.install "completions/kubedb.zsh" => "_kubedb"
-        fish_completion.install "completions/kubedb.fish"
+        man1.install Dir["manpages/*"]
+        bash_completion.install Dir["completions/bash/*"]
+        zsh_completion.install Dir["completions/zsh/*"]
+        fish_completion.install Dir["completions/fish/*"]
       end
     end
     on_arm do
-      url "https://github.com/clevyr/kubedb/releases/download/v1.15.0/kubedb_1.15.0_darwin_arm64.tar.gz"
-      sha256 "d936d823383bdccd855036b23b5e093b732b98a21f043473c371d6449f759e06"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.15.1/kubedb_1.15.1_darwin_arm64.tar.gz"
+      sha256 "f83ebd7fb708c2ea59406fe403955cf428da82a2c6481fe2c209b4564e8ff536"
 
       def install
         bin.install "kubedb"
-        man1.install "manpages/kubedb.1.gz"
-        man1.install "manpages/kubedb-dump.1.gz"
-        man1.install "manpages/kubedb-exec.1.gz"
-        man1.install "manpages/kubedb-port-forward.1.gz"
-        man1.install "manpages/kubedb-restore.1.gz"
-        man1.install "manpages/kubedb-status.1.gz"
-        bash_completion.install "completions/kubedb.bash" => "kubedb"
-        zsh_completion.install "completions/kubedb.zsh" => "_kubedb"
-        fish_completion.install "completions/kubedb.fish"
+        man1.install Dir["manpages/*"]
+        bash_completion.install Dir["completions/bash/*"]
+        zsh_completion.install Dir["completions/zsh/*"]
+        fish_completion.install Dir["completions/fish/*"]
       end
     end
   end
@@ -48,39 +38,29 @@ class Kubedb < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/kubedb/releases/download/v1.15.0/kubedb_1.15.0_linux_amd64.tar.gz"
-        sha256 "6c22d1262ac89678837d55d9402f511bd4459596133f2e88fbca285165b0b35b"
+        url "https://github.com/clevyr/kubedb/releases/download/v1.15.1/kubedb_1.15.1_linux_amd64.tar.gz"
+        sha256 "a0f4245b705c19d408aeed1c7be745161f0e5b1ce77af2a40a221c1d48086694"
 
         def install
           bin.install "kubedb"
-          man1.install "manpages/kubedb.1.gz"
-          man1.install "manpages/kubedb-dump.1.gz"
-          man1.install "manpages/kubedb-exec.1.gz"
-          man1.install "manpages/kubedb-port-forward.1.gz"
-          man1.install "manpages/kubedb-restore.1.gz"
-          man1.install "manpages/kubedb-status.1.gz"
-          bash_completion.install "completions/kubedb.bash" => "kubedb"
-          zsh_completion.install "completions/kubedb.zsh" => "_kubedb"
-          fish_completion.install "completions/kubedb.fish"
+          man1.install Dir["manpages/*"]
+          bash_completion.install Dir["completions/bash/*"]
+          zsh_completion.install Dir["completions/zsh/*"]
+          fish_completion.install Dir["completions/fish/*"]
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/kubedb/releases/download/v1.15.0/kubedb_1.15.0_linux_arm64.tar.gz"
-        sha256 "c4ca8464819c0c4922052608c7d1c77aed533540898a78b2d5434c539c8063a2"
+        url "https://github.com/clevyr/kubedb/releases/download/v1.15.1/kubedb_1.15.1_linux_arm64.tar.gz"
+        sha256 "77548c4c07709b864d74c0424b6d0165c7d9ed7b8a2f40d59613aa77ee2d73b7"
 
         def install
           bin.install "kubedb"
-          man1.install "manpages/kubedb.1.gz"
-          man1.install "manpages/kubedb-dump.1.gz"
-          man1.install "manpages/kubedb-exec.1.gz"
-          man1.install "manpages/kubedb-port-forward.1.gz"
-          man1.install "manpages/kubedb-restore.1.gz"
-          man1.install "manpages/kubedb-status.1.gz"
-          bash_completion.install "completions/kubedb.bash" => "kubedb"
-          zsh_completion.install "completions/kubedb.zsh" => "_kubedb"
-          fish_completion.install "completions/kubedb.fish"
+          man1.install Dir["manpages/*"]
+          bash_completion.install Dir["completions/bash/*"]
+          zsh_completion.install Dir["completions/zsh/*"]
+          fish_completion.install Dir["completions/fish/*"]
         end
       end
     end
