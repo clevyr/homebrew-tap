@@ -5,13 +5,13 @@
 class Yampl < Formula
   desc "Yaml templating via line-comments"
   homepage "https://github.com/clevyr/yampl"
-  version "0.9.0"
+  version "0.9.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.9.0/yampl_0.9.0_darwin_amd64.tar.gz"
-      sha256 "89aa69c4e7524c4f27dd01fcf1bcbec0faa676a8a38843e1cf3bf971de40c834"
+      url "https://github.com/clevyr/yampl/releases/download/v0.9.1/yampl_0.9.1_darwin_amd64.tar.gz"
+      sha256 "9ef101a399550a1a2bcf454addbdf0ad5fb1e851a7c2ef88b48232059753d7ef"
 
       def install
         bin.install "yampl"
@@ -22,8 +22,8 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/yampl/releases/download/v0.9.0/yampl_0.9.0_darwin_arm64.tar.gz"
-      sha256 "0e7907f59e2b512e5b9882a9072826163522ae0d43722baf0790d5e62be307ee"
+      url "https://github.com/clevyr/yampl/releases/download/v0.9.1/yampl_0.9.1_darwin_arm64.tar.gz"
+      sha256 "d1cf7157e9e82681e318954d483a7d20a248669540364080d64e58358ad7a6ce"
 
       def install
         bin.install "yampl"
@@ -38,8 +38,8 @@ class Yampl < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/yampl/releases/download/v0.9.0/yampl_0.9.0_linux_amd64.tar.gz"
-        sha256 "d32cc7f5a9faf4a672872888376f6244e076150d023fd406e76f67c762fe1af6"
+        url "https://github.com/clevyr/yampl/releases/download/v0.9.1/yampl_0.9.1_linux_amd64.tar.gz"
+        sha256 "6d50e94646316213818477dccca835441536f416056c39348696e22c89591952"
 
         def install
           bin.install "yampl"
@@ -52,8 +52,8 @@ class Yampl < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/yampl/releases/download/v0.9.0/yampl_0.9.0_linux_arm64.tar.gz"
-        sha256 "50506b30e639a8f4f6ae4f025a3cbb41ee1df7b25ee9f26bd93626b61c7f2965"
+        url "https://github.com/clevyr/yampl/releases/download/v0.9.1/yampl_0.9.1_linux_arm64.tar.gz"
+        sha256 "f00cafa7cf1068e579c63c30abcbb3e7fbb51620a60a0eb5db03a2ed99010a19"
 
         def install
           bin.install "yampl"
