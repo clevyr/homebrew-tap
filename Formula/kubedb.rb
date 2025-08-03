@@ -5,13 +5,13 @@
 class Kubedb < Formula
   desc "Painlessly work with Kubernetes databases"
   homepage "https://github.com/clevyr/kubedb"
-  version "1.17.4"
+  version "1.18.0"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.17.4/kubedb_1.17.4_darwin_amd64.tar.gz"
-      sha256 "d1796c1302c8e0f9a978747355c209cd42f233609c36624a5d147f134c09c5ac"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.18.0/kubedb_1.18.0_darwin_amd64.tar.gz"
+      sha256 "f02bea161f470ea5c650daadf0ea8553ef65daae97487c2e444b2830c979f8b3"
 
       def install
         bin.install "kubedb"
@@ -22,8 +22,8 @@ class Kubedb < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/kubedb/releases/download/v1.17.4/kubedb_1.17.4_darwin_arm64.tar.gz"
-      sha256 "05545df2c88c336ee6300683db911036c1dc678445b15e047398b8cbe585425a"
+      url "https://github.com/clevyr/kubedb/releases/download/v1.18.0/kubedb_1.18.0_darwin_arm64.tar.gz"
+      sha256 "def34bce90954a756f6cc9dd806ec5f63bee7c19783a664e96e3c539cc310b7d"
 
       def install
         bin.install "kubedb"
@@ -36,32 +36,26 @@ class Kubedb < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/kubedb/releases/download/v1.17.4/kubedb_1.17.4_linux_amd64.tar.gz"
-        sha256 "772663a907cfbf8b337094469da85e5fbdca8d361fb321cf8976454d7de9e768"
-
-        def install
-          bin.install "kubedb"
-          man1.install Dir["manpages/*"]
-          bash_completion.install Dir["completions/bash/*"]
-          zsh_completion.install Dir["completions/zsh/*"]
-          fish_completion.install Dir["completions/fish/*"]
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/clevyr/kubedb/releases/download/v1.18.0/kubedb_1.18.0_linux_amd64.tar.gz"
+      sha256 "1e45e3b426e73db5f8125d98a4eb2b80c3f95675fcf5dc02c57e1952f30cfe67"
+      def install
+        bin.install "kubedb"
+        man1.install Dir["manpages/*"]
+        bash_completion.install Dir["completions/bash/*"]
+        zsh_completion.install Dir["completions/zsh/*"]
+        fish_completion.install Dir["completions/fish/*"]
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/kubedb/releases/download/v1.17.4/kubedb_1.17.4_linux_arm64.tar.gz"
-        sha256 "c2345c16ce133607393ed22b25a10108aad0ac9ed89b1c736ba6c5a175cbc4cc"
-
-        def install
-          bin.install "kubedb"
-          man1.install Dir["manpages/*"]
-          bash_completion.install Dir["completions/bash/*"]
-          zsh_completion.install Dir["completions/zsh/*"]
-          fish_completion.install Dir["completions/fish/*"]
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/clevyr/kubedb/releases/download/v1.18.0/kubedb_1.18.0_linux_arm64.tar.gz"
+      sha256 "6dfe446070d44254180450e74dec9aca842d0ebbccc25d8e6d939d13ea0f5f57"
+      def install
+        bin.install "kubedb"
+        man1.install Dir["manpages/*"]
+        bash_completion.install Dir["completions/bash/*"]
+        zsh_completion.install Dir["completions/zsh/*"]
+        fish_completion.install Dir["completions/fish/*"]
       end
     end
   end
