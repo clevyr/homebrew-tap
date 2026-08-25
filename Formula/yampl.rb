@@ -5,15 +5,15 @@
 class Yampl < Formula
   desc "Yaml templating via line-comments"
   homepage "https://github.com/clevyr/yampl"
-  version "0.9.1"
+  version "0.10.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clevyr/yampl/releases/download/v0.9.1/yampl_0.9.1_darwin_amd64.tar.gz"
-      sha256 "9ef101a399550a1a2bcf454addbdf0ad5fb1e851a7c2ef88b48232059753d7ef"
+      url "https://github.com/clevyr/yampl/releases/download/v0.10.0/yampl_0.10.0_darwin_amd64.tar.gz"
+      sha256 "f37fab2d9ff6b1d91ae56a4905b6863b9f979c864a753e943346cee77c88b84e"
 
-      def install
+      define_method(:install) do
         bin.install "yampl"
         man1.install Dir["manpages/*"]
         bash_completion.install Dir["completions/bash/*"]
@@ -22,10 +22,10 @@ class Yampl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clevyr/yampl/releases/download/v0.9.1/yampl_0.9.1_darwin_arm64.tar.gz"
-      sha256 "d1cf7157e9e82681e318954d483a7d20a248669540364080d64e58358ad7a6ce"
+      url "https://github.com/clevyr/yampl/releases/download/v0.10.0/yampl_0.10.0_darwin_arm64.tar.gz"
+      sha256 "a37ca9569a7779da5981c5f85884160b2a867ca1303acbaa0896a77204fb799e"
 
-      def install
+      define_method(:install) do
         bin.install "yampl"
         man1.install Dir["manpages/*"]
         bash_completion.install Dir["completions/bash/*"]
@@ -36,32 +36,26 @@ class Yampl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/yampl/releases/download/v0.9.1/yampl_0.9.1_linux_amd64.tar.gz"
-        sha256 "6d50e94646316213818477dccca835441536f416056c39348696e22c89591952"
-
-        def install
-          bin.install "yampl"
-          man1.install Dir["manpages/*"]
-          bash_completion.install Dir["completions/bash/*"]
-          zsh_completion.install Dir["completions/zsh/*"]
-          fish_completion.install Dir["completions/fish/*"]
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/clevyr/yampl/releases/download/v0.10.0/yampl_0.10.0_linux_amd64.tar.gz"
+      sha256 "d7bbde0f2bfe4fe594b8571eaa94d280604f600ee97f40bb5ac748773243be33"
+      define_method(:install) do
+        bin.install "yampl"
+        man1.install Dir["manpages/*"]
+        bash_completion.install Dir["completions/bash/*"]
+        zsh_completion.install Dir["completions/zsh/*"]
+        fish_completion.install Dir["completions/fish/*"]
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/clevyr/yampl/releases/download/v0.9.1/yampl_0.9.1_linux_arm64.tar.gz"
-        sha256 "f00cafa7cf1068e579c63c30abcbb3e7fbb51620a60a0eb5db03a2ed99010a19"
-
-        def install
-          bin.install "yampl"
-          man1.install Dir["manpages/*"]
-          bash_completion.install Dir["completions/bash/*"]
-          zsh_completion.install Dir["completions/zsh/*"]
-          fish_completion.install Dir["completions/fish/*"]
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/clevyr/yampl/releases/download/v0.10.0/yampl_0.10.0_linux_arm64.tar.gz"
+      sha256 "4ecf86933ee70f3b1905157d3e276f3dd191d737cd52e49b833c686a4220d712"
+      define_method(:install) do
+        bin.install "yampl"
+        man1.install Dir["manpages/*"]
+        bash_completion.install Dir["completions/bash/*"]
+        zsh_completion.install Dir["completions/zsh/*"]
+        fish_completion.install Dir["completions/fish/*"]
       end
     end
   end
