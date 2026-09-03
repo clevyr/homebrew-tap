@@ -2,25 +2,25 @@
 cask "corg" do
   binary "corg", target: "kubectl-corg"
 
-  version "0.0.16"
+  version "0.0.17"
 
   on_macos do
     on_arm do
-      sha256 "7b5fa5d2696415c0b38970db235acb399ca83262a0e0613aa50aca174b56f373"
+      sha256 "ba6011306badb359bf3bd42d2e59b1199fc50c8918d7203c622fbb6171f78a32"
       url "https://github.com/clevyr/borgbase-operator/releases/download/v#{version}/corg_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "655a2194a928869c570b13faba73bf870ecd9d82ee8ef4fc893fd9ce5fc195d3"
+      sha256 "6abe09e357fe342936d5f4ce329c42315294abd7d79fd15b1e3371147b48c706"
       url "https://github.com/clevyr/borgbase-operator/releases/download/v#{version}/corg_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "c047e78bf6e8fd5a6ce354aa129bfdf2900a583d69d0f1016e6ae8d0a551884e"
+      sha256 "d0cdece6f5d18126cda53cec47446b5f6f0d63fc5d27f9c9479840df4c6ef4ff"
       url "https://github.com/clevyr/borgbase-operator/releases/download/v#{version}/corg_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "fc954a4c3b8aa039a2b3ba023b514bbcf7d2185137b7f5e3ff50764e01773329"
+      sha256 "cc5139c71bd81a5ca353d217c1ed3d06557b227da0865493749c5c0b303ec9c4"
       url "https://github.com/clevyr/borgbase-operator/releases/download/v#{version}/corg_#{version}_linux_amd64.tar.gz"
     end
   end
